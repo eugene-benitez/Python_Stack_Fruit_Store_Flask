@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Coding Dojo Fruit Store!</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Dojo Fruit Store!</h1>
+        <br>
+        <br>
+        <h2>Thank you for your order!</h2>
+        <p>We ordered {{ total }} items for you
+            and charged {{ name_on_template }} with student id {{ student_on_template }} on {{ time }} </p>
+        <div class="table">
+            <form action="/checkout" method="post">
+                <table>
+                    <tr>
+                        <th>Fruit Name</th>
+                        <th>Quantity</th>
+                    </tr>
+                    <tr>
+                        <td>Strawberry</td>
+                        <td>
+                            {{ strawberry_on_template }}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Raspberry</td>
+                        <td>
+                            {{ raspberry_on_template }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Apple</td>
+                        <td>
+                            {{ apple_on_template }}
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <h2>Your Information:</h2>
+                <p>Name:
+                    {{ name_on_template }}
+                </p>
+                <p>Your Student ID:
+                    {{ student_on_template }}
+                </p>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

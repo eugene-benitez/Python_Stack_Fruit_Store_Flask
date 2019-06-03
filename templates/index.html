@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Coding Dojo Fruit Store!</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Dojo Fruit Store!</h1>
+        <br>
+        <br>
+        <h2> What would you like to buy?</h2>
+        <div class="table">
+            <form action="/checkout" method="post">
+                <table>
+                    <tr>
+                        <th>Fruit Name</th>
+                        <th>Quantity</th>
+                    </tr>
+                    <tr>
+                        <td>Strawberry</td>
+                        <td>
+                            <select name="Strawberry">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Raspberry</td>
+                        <td>
+                            <select name="Raspberry">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Apple</td>
+                        <td>
+                            <select name="Apple">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <h2>Your Information:</h2>
+                <p>Name:
+                    <input type="text" name="name" value="">
+                </p>
+                <p>Your Student ID:
+                    <input type="text" name="student_id" value="">
+                </p>
+                <input type="submit" value="Buy me stuff!">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
